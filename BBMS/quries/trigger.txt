@@ -1,0 +1,57 @@
+select * from user_triger;
+
+CREATE OR REPLACE TRIGGER ins_update_user
+  AFTER INSERT OR UPDATE ON user_info 
+  FOR EACH ROW
+BEGIN
+  IF INSERTING THEN 
+    INSERT INTO user_triger (ut_id,action,time,old,new) VALUES (usertriger.nextval, 'Insert', SYSTIMESTAMP, '-', :NEW.username);
+  END IF;
+
+  IF UPDATING THEN
+    INSERT INTO user_triger (ut_id,action,time,old,new) VALUES (usertriger.nextval, 'Update', SYSTIMESTAMP, :OLD.username, :NEW.username);
+  END IF;
+END;
+
+
+CREATE OR REPLACE 
+TRIGGER ins_update_donor
+  AFTER INSERT OR UPDATE ON donor
+  FOR EACH ROW
+BEGIN
+  IF INSERTING THEN 
+    INSERT INTO donor_triger (dt_id,action,time,old,new) VALUES (donortriger.nextval, 'Insert', SYSTIMESTAMP, '-', :NEW.D_NAME);
+  END IF;
+
+  IF UPDATING THEN
+    INSERT INTO donor_triger (dt_id,action,time,old,new) VALUES (donortriger.nextval, 'Update', SYSTIMESTAMP, :OLD.D_NAME, :NEW.D_NAME);
+  END IF;
+END;
+
+CREATE OR REPLACE 
+TRIGGER ins_update_emp
+  AFTER INSERT OR UPDATE ON employee
+  FOR EACH ROW
+BEGIN
+  IF INSERTING THEN 
+    INSERT INTO emp_triger (emp_id,action,time,old,new) VALUES (emptriger.nextval, 'Insert', SYSTIMESTAMP, '-', :NEW.emp_name);
+  END IF;
+
+  IF UPDATING THEN
+    INSERT INTO emp_triger (emp_id,action,time,old,new) VALUES (emptriger.nextval, 'Update', SYSTIMESTAMP, :OLD.emp_name, :NEW.emp_name);
+  END IF;
+END;
+
+CREATE OR REPLACE  
+TRIGGER ins_update_branch
+  AFTER INSERT OR UPDATE ON branch
+  FOR EACH ROW
+BEGIN
+  IF INSERTING THEN 
+    INSERT INTO branch_triger (br_id,action,time,old,new) VALUES (branchtriger.nextval, 'Insert', SYSTIMESTAMP, '-', :NEW.B_NAME);
+  END IF;
+
+  IF UPDATING THEN
+    INSERT INTO branch_triger (br_id,action,time,old,new) VALUES (branchtriger.nextval, 'Update', SYSTIMESTAMP, :OLD.B_NAME, :NEW.B_NAME);
+  END IF;
+END;

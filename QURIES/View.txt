@@ -1,0 +1,28 @@
+1.
+create view empofdnr 
+as 
+select d.d_name,e.emp_name 
+from donor d,employee e 
+where d.b_id=e.b_id
+
+2.
+create view dnrbgroup 
+as 
+select d.d_name,d.area,b.blood_group 
+from donor d,blood b 
+where d.b_id=b.blood_id
+
+3.
+create view areadnr 
+as 
+select area,count(d_name)"Total_no_of_donor" 
+from donor 
+where area='Gulshan' 
+group by area
+
+4.
+create view binfo 
+as 
+select blood_amount,blood_group,paid_amount 
+from blood 
+where paid_amount>1500

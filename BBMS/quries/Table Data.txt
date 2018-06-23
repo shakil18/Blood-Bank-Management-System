@@ -1,0 +1,37 @@
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'shakil', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'kousheik', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Akash', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Nila', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Nishi', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Polin', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Abir', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Ornob', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Jibon', '123');
+INSERT INTO user_info(user_id,username,password) VALUES (nuser.nextval, 'Noushin', '123');
+
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '15', 'A+',1200);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '6', 'A-',2000);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '11', 'AB+',1800);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '9', 'AB-',2000);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '26', 'B+',1200);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '18', 'B-',1600);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '14', 'O+',1600);
+
+INSERT INTO blood (blood_id,d_id,blood_amount,blood_group,paid_amount) VALUES (bld.nextval,'', '4', 'O-',3500);
+
+
+INSERT INTO donor(d_id, b_id, d_name, address, area, subarea, blood_group, national_id, phone, email) VALUES (dnr.nextval, dnr.nextval, 'khadija', 'Dhaka', 'Gulshan', 'Gulshan', 'A+', '123456798', '01676767', 'kh@gmail.com');
+
+INSERT INTO donor(d_id, b_id, d_name, address, area, subarea, blood_group, national_id, phone, email) VALUES (dnr.nextval, dnr.nextval,  'Kashem', 'Dhaka', 'Banani', 'Banani', 'O+', '123456798', '01676767', 'zxy@gmail.com');
+
+INSERT INTO employee(emp_id, b_id, emp_name, emp_salary, emp_address, emp_area, emp_role, phone, email) VALUES (emp.nextval,1,'Polash','15000', 'Gulshan', 'Gulshan', 'Executive', '0171857455', 'polash@gmail.com');
+
+INSERT INTO employee(emp_id, b_id, emp_name, emp_salary, emp_address, emp_area, emp_role, phone, email) VALUES (emp.nextval,2,'Fahim','20000', 'Banani', 'Banani', 'Manager', '0191857455', 'fa@gmail.com');
+

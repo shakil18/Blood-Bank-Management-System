@@ -1,0 +1,57 @@
+//Procedure
+
+CREATE OR REPLACE PROCEDURE 
+        sayHello (name IN VARCHAR2, greeting OUT VARCHAR2) 
+    AS
+        BEGIN
+            greeting := 'Welcome, ' || name;
+        END;
+
+commit;
+
+//Function
+
+CREATE OR REPLACE FUNCTION emp_job_count 
+RETURN number
+IS
+total number:=0;
+BEGIN
+Select count(*) into total from employee;
+Return total;
+END;
+
+CREATE OR REPLACE FUNCTION user_count 
+RETURN number
+IS
+total number:=0;
+BEGIN
+Select count(*) into total from user_triger;
+Return total;
+END;
+
+CREATE OR REPLACE FUNCTION donor_count 
+RETURN number
+IS
+total number:=0;
+BEGIN
+Select count(*) into total from donor_triger;
+Return total;
+END;
+
+CREATE OR REPLACE FUNCTION emp_count 
+RETURN number
+IS
+total number:=0;
+BEGIN
+Select count(*) into total from emp_triger;
+Return total;
+END;
+
+CREATE OR REPLACE FUNCTION branch_count 
+RETURN number
+IS
+total number:=0;
+BEGIN
+Select count(*) into total from branch_triger;
+Return total;
+END;
