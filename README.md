@@ -1,8 +1,8 @@
 
 ## Table of Contents
 
-- [Blood Bank Management System <a name = "about_the_project"></a>](#online-inventory-system-)
-  - [Directory Structure <a name = "directory_structure"></a>](#directory-structure-)
+- [Blood Bank Management System <a name = "about_the_project"></a>](#blood-bank-management-system-)
+  - [System Overview <a name = "directory_structure"></a>](#system-overview-)
   - [Requirements <a name = "requirements"></a>](#requirements-)
   - [Contact <a name = "contact"></a>](#contact-)
 ---
@@ -14,11 +14,18 @@ This project is about to deploy a PHP-based multi-admin operable web-application
 
 
 <!-- DIRECTORY STRUCTURE -->
-## Project Overview <a name = "directory_structure"></a>
+## System Overview <a name = "directory_structure"></a>
 
-Below figure presents the Donorl panel of the system.
-> Donor site:
-> ![image](./BBMS Sample images/Donor info.png)
+Below figures presents different pages of the system:
+
+> Dashboard:
+> ![image](./BBMS%20Sample%20images/dashboard-1.png)
+
+> Donor list site:
+> ![image](./BBMS%20Sample%20images/Donor%20info.png)
+
+> Availability site:
+> ![image](./BBMS%20Sample%20images/blood%20in%20stock.png)
 
 <!-- REQUIREMENTS  -->
 ## Requirements <a name = "requirements"></a>
