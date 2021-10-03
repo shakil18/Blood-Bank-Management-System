@@ -18,7 +18,7 @@ This project is about to deploy a PHP-based multi-admin operable web-application
 
 Below figure presents the Donorl panel of the system.
 > Donor site:
-> ![image](./BBMS_Sample_images/Donor_info.png)
+> ![image](./BBMS Sample images/Donor info.png)
 
 <!-- REQUIREMENTS  -->
 ## Requirements <a name = "requirements"></a>
